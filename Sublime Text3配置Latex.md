@@ -1,4 +1,4 @@
-配置Latex环境前需要安装texlive发行版，建议从[清华镜像](https://mirrors4.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/)下载（**下载texlive 2019.iso即可**），注意texlive安装没有可执行exe文件，需要命令行运行，但也很简单，搜一下教程即可。
+配置Latex环境前需要安装texlive发行版，建议从[清华镜像](https://mirrors4.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/)下载（**下载texlive 2019.iso即可**），注意texlive安装不是运行exe文件，但也很简单，搜一下教程即可。
 
 Latex只是一种语言，推荐使用[Sublime Text3](https://www.sublimetext.com/)或者[Vs Code](https://code.visualstudio.com/)编写，这里就只讲Sublime配置Latex的方法。
 
@@ -105,3 +105,7 @@ pdflatex太老，lualatex还有bug。
 主要是中间部分，全绿即可。如果有部分插件不可用，检查对应步骤。
 
 最后，关于插入参考文献的问题，可以参考[这篇文章](https://blog.csdn.net/HollyRan/article/details/89977696)
+
+# 参考
+1. [有龙则灵](https://htharoldht.com)关于配置的方法
+2. [texlive安装流程](https://zhuanlan.zhihu.com/p/36240727)
