@@ -2,6 +2,8 @@
 
 Latex只是一种语言，推荐使用[Sublime Text3](https://www.sublimetext.com/)或者[Vs Code](https://code.visualstudio.com/)编写，这里就只讲Sublime配置Latex的方法。
 
+vs code配置latex非常简单，参见[这里](https://zhuanlan.zhihu.com/p/71432461)。
+
 # 安装准备
 1. Sublime Text 3：软件
 2. Sumatra PDF：PDF阅读器，主要用于双向搜索
