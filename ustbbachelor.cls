@@ -273,12 +273,13 @@
 \pagestyle{fancy}
 \let\sectionmark\@gobble
 \renewcommand\headrulewidth{0.4\p@}
-\newcommand\ustc@hf@font{\fontsize{9\bp@}{12\bp@}\selectfont}
+\newcommand\ustc@forhead@font{\fontsize{9\bp@}{12\bp@}\selectfont}
+\newcommand\ustc@forfoot@font{\fontsize{10.5\bp@}{12\bp@}\selectfont}
 \newcommand\ustc@header{北京科技大学本科生毕业设计(论文)}
 \fancypagestyle{plain}{%
   \fancyhf{}%
-  \fancyhead[C]{\ustc@hf@font\ustc@header}%
-  \fancyfoot[C]{\ustc@hf@font\thepage}%
+  \fancyhead[C]{\ustc@forhead@font\ustc@header}%
+  \fancyfoot[C]{\ustc@forfoot@font{-\thepage-}}%
 }
 \pagestyle{plain}
 \newcommand\ustc@patchcmd{\csname ctex_patch_cmd:Nnn\endcsname}
@@ -678,12 +679,16 @@
   justification  = justified,
   font           = {sf,bf,small}, % 黑体，加粗，5号
   labelsep       = zhspace,
-  skip           = 8\bp@,         % 0.5倍行距
   figureposition = bottom,
   tableposition  = top,
 }
 \captionsetup[figure]{
-  belowskip = 13\bp@,             % 13 + 8 = 21
+  aboveskip = 8\bp@,
+  belowskip = 15\bp@,
+}
+\captionsetup[table]{
+  aboveskip = 15\bp@,
+  belowskip = 8\bp@,
 }
 \newcommand\note[1]{%
   \begingroup
@@ -697,6 +702,7 @@
   \caption*{#1}%
   \endgroup
 }
+\renewcommand\theequation{\arabic{chapter}-\arabic{equation}}
 \ifustc@chinese
   \def\mathellipsis{\cdots}
 \fi
