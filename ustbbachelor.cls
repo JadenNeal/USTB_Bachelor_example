@@ -279,7 +279,7 @@
 \fancypagestyle{plain}{%
   \fancyhf{}%
   \fancyhead[C]{\ustc@forhead@font\ustc@header}%
-  \fancyfoot[C]{\ustc@forfoot@font{-\thepage-}}%
+  \fancyfoot[C]{\ustc@forfoot@font{-\ \thepage\ -}}%
 }
 \pagestyle{plain}
 \newcommand\ustc@patchcmd{\csname ctex_patch_cmd:Nnn\endcsname}
@@ -567,7 +567,7 @@
   \ustc@chapter{\contentsname}%
   \@starttoc{toc}%
 }
-\newcommand\ustc@leaders{\titlerule*[7.5\bp@]{\textperiodcentered}}
+\newcommand\ustc@leaders{\titlerule*[6.5\bp@]{...}}
 \titlecontents{chapter}
   [\z@]{\addvspace{6\bp@}\fontsize{12\bp@}{20\bp@}\selectfont}
   {\contentspush{\thecontentslabel\unskip\hspace{\ccwd}}}{}
@@ -684,10 +684,10 @@
 }
 \captionsetup[figure]{
   aboveskip = 8\bp@,
-  belowskip = 15\bp@,
+  belowskip = 10\bp@,
 }
 \captionsetup[table]{
-  aboveskip = 15\bp@,
+  aboveskip = 8\bp@,
   belowskip = 8\bp@,
 }
 \newcommand\note[1]{%
