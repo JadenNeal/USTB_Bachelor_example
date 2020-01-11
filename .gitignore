@@ -9,6 +9,7 @@
 *.fmt
 *.fot
 *.cb
+*.hd
 *.cb2
 .*.lb
 
