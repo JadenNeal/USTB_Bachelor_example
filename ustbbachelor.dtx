@@ -1060,7 +1060,7 @@
 \fancypagestyle{plain}{%
   \fancyhf{}%
   \fancyhead[C]{\ustc@forhead@font\ustc@header}%
-  \fancyfoot[C]{\ustc@forfoot@font{-\thepage-}}%
+  \fancyfoot[C]{\ustc@forfoot@font{-\ \thepage\ -}}%
 }
 \pagestyle{plain}
 %    \end{macrocode}
@@ -1545,7 +1545,7 @@
 % 下面用 \pkg{titletoc} 宏包设置目录内容的格式。
 % 先定义目录线：
 %    \begin{macrocode}
-\newcommand\ustc@leaders{\titlerule*[7.5\bp@]{\textperiodcentered}}
+\newcommand\ustc@leaders{\titlerule*[6.5\bp@]{...}}
 %    \end{macrocode}
 %
 % 各章目录要求宋体 12 磅，行距 20 磅，段前 6 磅，段后 0 磅，两端对齐，
