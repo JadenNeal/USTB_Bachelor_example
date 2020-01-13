@@ -194,7 +194,7 @@
 % \GetFileInfo{\jobname.dtx}
 %
 % \title{\cls{ustbbachelor} 使用说明}
-% \author{Zeping Lee\thanks{zepinglee AT gmail.com}}
+% \author{Weicai Long\thanks{longweicai1997 AT 163.com}}
 % \date{\filedate\qquad\fileversion}
 % \maketitle
 %
@@ -1375,11 +1375,13 @@
 % 各章标题：黑体小三加粗，非正文标题居中，正文标题左对齐。
 % 段前 17 磅，段后 17 磅，
 % 章序号与章名间空一字。
+%
+% 先定义“非正文”的章标题格式。
 %    \begin{macrocode}
 \ctexset{
     chapter = {
       format      = \centering\sffamily\bfseries\fontsize{15\bp@}{25\bp@}\selectfont,
-      nameformat  = {},
+      name  = {},    % 正文章标题如 1 引言
       titleformat = \ustc@spacetitle,
       number      = \thechapter,
       aftername   = \hspace{\ccwd},
@@ -1387,6 +1389,22 @@
 }
 %    \end{macrocode}
 %
+% 再定义“正文”的章标题格式。
+\newcommand{\textchapter}[1]{
+  \begingroup
+    \ctexset{
+      chapter = {
+      format      = \raggedright\sffamily\bfseries\fontsize{15\bp@}{25\bp@}\selectfont,
+      name  = {},  
+      titleformat = \ustc@spacetitle,
+      number      = \thechapter,
+      aftername   = \hspace{\ccwd},
+      }, 
+    }
+    \chapter{#1}
+  \endgroup
+}
+% 
 % 注意 \pkg{ctex} 2.4.3 以下版本的bug会导致章节标题前后的距离的实际值偏大，
 % 临时的解决方案是手动调整，偏移值为beforeskip=-31bp, afterskip=-10bp。
 %
@@ -1488,11 +1506,8 @@
   \IfValueTF{#1}{%
     \ustc@pdfbookmark{#1}%
     \chaptermark{#1}%
-  }{%
-    \ustc@pdfbookmark{#2}%
-    \chaptermark{#2}%
-  }%
-  \chapter*{#2}}
+  }
+  \chapter{#2}}
 %    \end{macrocode}
 % \end{macro}
 %
@@ -1545,7 +1560,7 @@
 % 下面用 \pkg{titletoc} 宏包设置目录内容的格式。
 % 先定义目录线：
 %    \begin{macrocode}
-\newcommand\ustc@leaders{\titlerule*[6.5\bp@]{...}}
+\newcommand\ustc@leaders{\titlerule*[6.5\bp@]{..}}
 %    \end{macrocode}
 %
 % 各章目录要求宋体 12 磅，行距 20 磅，段前 6 磅，段后 0 磅，两端对齐，
@@ -1984,7 +1999,7 @@
         #1\NAT@@close\if*#3*\else\textsuperscript{#3}\fi\else#1\fi\endgroup}
 %    \end{macrocode}
 %
-% 在顺序编码制下，\pkg{natbib} 只有在三个以上连续文献引用才会使用连接号，
+% 在顺序编码制下，\pkg{natbib} 只有在三个以上连��文献引用才会使用连接号，
 % 这里修改为允许两个引用使用连接号。
 % \footnote{\url{https://tex.stackexchange.com/a/86991/82731}}
 %    \begin{macrocode}
