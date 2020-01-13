@@ -473,11 +473,25 @@
 \ctexset{
     chapter = {
       format      = \centering\sffamily\bfseries\fontsize{15\bp@}{25\bp@}\selectfont,
-      nameformat  = {},
+      name  = {},    % 正文章标题如 1 引言
       titleformat = \ustc@spacetitle,
       number      = \thechapter,
       aftername   = \hspace{\ccwd},
     },
+}
+\newcommand{\textchapter}[1]{
+  \begingroup
+    \ctexset{
+      chapter = {
+      format      = \raggedright\sffamily\bfseries\fontsize{15\bp@}{25\bp@}\selectfont,
+      name  = {},
+      titleformat = \ustc@spacetitle,
+      number      = \thechapter,
+      aftername   = \hspace{\ccwd},
+      },
+    }
+    \chapter{#1}
+  \endgroup
 }
 \@ifclasslater{ctexbook}{2016/09/21}{
   \ctexset{
@@ -540,11 +554,8 @@
   \IfValueTF{#1}{%
     \ustc@pdfbookmark{#1}%
     \chaptermark{#1}%
-  }{%
-    \ustc@pdfbookmark{#2}%
-    \chaptermark{#2}%
-  }%
-  \chapter*{#2}}
+  }
+  \chapter{#2}}
 \newenvironment{abstract}{%
   \ustc@setchinese
   \ustc@chapter{摘要}%
@@ -567,7 +578,7 @@
   \ustc@chapter{\contentsname}%
   \@starttoc{toc}%
 }
-\newcommand\ustc@leaders{\titlerule*[6.5\bp@]{...}}
+\newcommand\ustc@leaders{\titlerule*[6.5\bp@]{..}}
 \titlecontents{chapter}
   [\z@]{\addvspace{6\bp@}\fontsize{12\bp@}{20\bp@}\selectfont}
   {\contentspush{\thecontentslabel\unskip\hspace{\ccwd}}}{}
