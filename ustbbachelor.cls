@@ -695,10 +695,10 @@
 }
 \captionsetup[figure]{
   aboveskip = 8\bp@,
-  belowskip = 10\bp@,
+  belowskip = 4\bp@,
 }
 \captionsetup[table]{
-  aboveskip = 8\bp@,
+  aboveskip = 4\bp@,
   belowskip = 8\bp@,
 }
 \newcommand\note[1]{%
