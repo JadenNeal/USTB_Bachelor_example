@@ -50,5 +50,6 @@ latexmk -xelatex ustbbachelor.dtx
 ---
 如有问题或改进意见，请提交**issue**或通过以下方式联系我：
 
-* email: longweicai1997@163.com
+* email-1: longweicai1997@163.com
+* email-2: mojerro@163.com
 * QQ:    1433535963
