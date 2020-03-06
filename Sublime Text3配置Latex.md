@@ -87,14 +87,14 @@ pdflatex太老，lualatex还有bug。
 这里的`xxxxx\xxx.exe`是自己安装sublime text 3的路径。
 
 ## 安装ImageMagick & GhostScript（可选）
-**这两个插件安装过程有些麻烦，并且效果一般，稍不注意bug还不少。**因此有时间有精力就可以继续安装这两个插件。
+**这两个插件安装过程有些麻烦，并且效果一般，稍不注意bug还不少**。因此有时间有精力就可以继续安装这两个插件。
 
 ### 安装ImageMagick
 从[官网](http://www.imagemagick.org/script/download.php)下载，windows平台的安装包在页面最下面。
 
 安装过程中的一步，勾选**添加环境变量、安装实用工具**，见下图：
 <div align="center"><img src="https://s2.ax1x.com/2020/01/01/lJ0O6e.jpg" alt="lJ0O6e.jpg" border="0" /></div>
-<center>图片来自有[有龙则灵](https://htharoldht.com)</center>
+<center>图片来自[有龙则灵](https://htharoldht.com)</center>
 
 ### 安装GhostScript
 从[官网](https://ghostscript.com/download/gsdnld.html)下载安装即可。
