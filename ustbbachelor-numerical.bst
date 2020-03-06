@@ -31,7 +31,7 @@ INTEGERS {
   in.booktitle
   italic.jounal
   bold.journal.volume
-  show.missing.address.publisher
+  %show.missing.address.publisher
   show.url
   show.doi
   show.note
