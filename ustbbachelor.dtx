@@ -1376,7 +1376,7 @@
 % 段前 17 磅，段后 17 磅，
 % 章序号与章名间空一字。
 %
-% 先定义“非正文”的章标题格式。
+% 先定义“非正文”的章标题格式，即摘要，清单，参考文献。
 %    \begin{macrocode}
 \ctexset{
     chapter = {
@@ -1389,7 +1389,7 @@
 }
 %    \end{macrocode}
 %
-% 再定义“正文”的章标题格式。
+% 再定义“正文”的章标题格式，即引言，结论等标题。
 \newcommand{\textchapter}[1]{
   \begingroup
     \ctexset{
