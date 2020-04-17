@@ -252,7 +252,7 @@
   \renewcommand\listfigurename{插图清单}
   \renewcommand\listtablename{表格清单}
   \newcommand\ustc@acknowledgementsname{致谢}
-  \newcommand\ustc@publicationsname{在读期间发表的学术论文与取得的研究成果}
+  \newcommand\ustc@publicationsname{在学取得成果}
   \newcommand\ustc@notationname{符号说明}
 \else
   \renewcommand\figurename{Fig.}
